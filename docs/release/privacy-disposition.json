@@ -1,0 +1,906 @@
+[
+  {
+    "scope": "history",
+    "path": "docs/dashboard-15b-switch/README.md",
+    "category": "personal_path",
+    "first_line": 14,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/dashboard-15b-switch/validation.json",
+    "category": "personal_path",
+    "first_line": 3,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/dashboard-model-switch/before-smoke.json",
+    "category": "personal_path",
+    "first_line": 5,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/dashboard-model-switch/smoke.json",
+    "category": "personal_path",
+    "first_line": 57,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/discussion-live-evidence/integration.json",
+    "category": "personal_path",
+    "first_line": 73,
+    "matches": 12,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/discussion-regression-evidence.md",
+    "category": "personal_path",
+    "first_line": 93,
+    "matches": 6,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/discussion-regression-investigation.md",
+    "category": "personal_path",
+    "first_line": 13,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/distributed-86b/evidence/smoke.json",
+    "category": "personal_path",
+    "first_line": 82,
+    "matches": 134,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/distributed-86b/initial-evidence/smoke.json",
+    "category": "personal_path",
+    "first_line": 82,
+    "matches": 134,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/distributed-86c/evidence/engineering.json",
+    "category": "personal_path",
+    "first_line": 1477,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/distributed-86c/evidence/pretrained/dashboard-events.jsonl",
+    "category": "personal_path",
+    "first_line": 2,
+    "matches": 12,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/distributed-86c/evidence/pretrained/frontend-tests.log",
+    "category": "personal_path",
+    "first_line": 6,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/distributed-86c/evidence/pretrained/health-ready.json",
+    "category": "personal_path",
+    "first_line": 1,
+    "matches": 4,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/distributed-86c/evidence/pretrained/local-preservation.json",
+    "category": "personal_path",
+    "first_line": 5,
+    "matches": 2,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/distributed-86c/evidence/pretrained/local-restored.json",
+    "category": "personal_path",
+    "first_line": 5,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/distributed-86c/evidence/pretrained/python-tests.log",
+    "category": "personal_path",
+    "first_line": 20,
+    "matches": 2,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/distributed-86c/evidence/pretrained/session-21ad6788-4698-4d53-a790-ac376e7b1328.json",
+    "category": "personal_path",
+    "first_line": 72,
+    "matches": 26,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/distributed-86c/evidence/pretrained/session-7461f118-2b22-41eb-93dd-9dae2b2aef45.json",
+    "category": "personal_path",
+    "first_line": 72,
+    "matches": 26,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/distributed-86c/evidence/pretrained/session-c3de05f4-e1b4-453f-bbcc-5c2e4d233ede.json",
+    "category": "personal_path",
+    "first_line": 75,
+    "matches": 22,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/distributed-86c/evidence/validation.json",
+    "category": "personal_path",
+    "first_line": 657,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/dynamic-auto-82a/evidence/audit.json",
+    "category": "personal_path",
+    "first_line": 27,
+    "matches": 2,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/dynamic-auto-82a/evidence/measured-profile-with-startup.json",
+    "category": "personal_path",
+    "first_line": 7,
+    "matches": 2,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/dynamic-auto-82a/evidence/profiles.json",
+    "category": "personal_path",
+    "first_line": 8,
+    "matches": 4,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/generalized-auto-85/evidence/complete.json",
+    "category": "personal_path",
+    "first_line": 5,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/generalized-auto-85/evidence/dashboard-final-latest.json",
+    "category": "personal_path",
+    "first_line": 5,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/generalized-auto-85/evidence/idealized-discussion.json",
+    "category": "personal_path",
+    "first_line": 51,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/generalized-auto-85/evidence/idealized-ws.json",
+    "category": "personal_path",
+    "first_line": 59,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/generalized-auto-85/evidence/measured-discussion.json",
+    "category": "personal_path",
+    "first_line": 31,
+    "matches": 5,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/generalized-auto-85/evidence/measured-profile.json",
+    "category": "personal_path",
+    "first_line": 6,
+    "matches": 4,
+    "disposition": "redacted_or_unrelated_deployment_section_excluded; no_private_values_retained"
+  },
+  {
+    "scope": "history",
+    "path": "docs/generalized-auto-85/evidence/measured-ws.json",
+    "category": "personal_path",
+    "first_line": 39,
+    "matches": 5,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/generalized-auto-85/evidence/spec.json",
+    "category": "personal_path",
+    "first_line": 2,
+    "matches": 5,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/generalized-auto-85/evidence/startup.json",
+    "category": "personal_path",
+    "first_line": 7,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/kv-transfer-83b/evidence/profiles.json",
+    "category": "personal_path",
+    "first_line": 10,
+    "matches": 8,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/kv-transfer-83b/evidence/settings.json",
+    "category": "personal_path",
+    "first_line": 3,
+    "matches": 4,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/kv-v2-79b-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 113,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/local-qwen3b-raw-outputs.md",
+    "category": "personal_path",
+    "first_line": 49,
+    "matches": 38,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/performance-83a/evidence/profiles.json",
+    "category": "personal_path",
+    "first_line": 10,
+    "matches": 20,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/performance-83a/evidence/settings.json",
+    "category": "personal_path",
+    "first_line": 3,
+    "matches": 4,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/shannon-90/evidence/audit.json",
+    "category": "personal_path",
+    "first_line": 4,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/shannon-90/evidence/session-ae6d990e-d7cc-4cdf-bcca-d8c677a499ee.json",
+    "category": "personal_path",
+    "first_line": 74,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/shannon-90/evidence/session-d44b0a8a-efb4-464c-b660-a1013602e504.json",
+    "category": "personal_path",
+    "first_line": 74,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/shannon-dynamic-channel-simulator.md",
+    "category": "lab_identifier",
+    "first_line": 11,
+    "matches": 1,
+    "disposition": "redacted_or_unrelated_deployment_section_excluded; no_private_values_retained"
+  },
+  {
+    "scope": "history",
+    "path": "docs/simulation-91-followup/post-after.json",
+    "category": "personal_path",
+    "first_line": 124,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/simulation-91-followup/validation.txt",
+    "category": "personal_path",
+    "first_line": 6,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/simulation-91/validation.txt",
+    "category": "personal_path",
+    "first_line": 26,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/socket-86a/evidence/result.json",
+    "category": "personal_path",
+    "first_line": 5,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/system-quality-83c/evidence/auto-evidence.json",
+    "category": "personal_path",
+    "first_line": 8,
+    "matches": 6,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/system-quality-83c/evidence/browser-rest-ws.json",
+    "category": "personal_path",
+    "first_line": 59,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/system-quality-83c/evidence/data/dashboard-v2-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 458,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/system-quality-83c/evidence/data/discussion-v2-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 456,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/system-quality-83c/evidence/data/formal-v2-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 456,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/system-quality-83c/evidence/data/pilot-v1-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 456,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/system-quality-83c/evidence/data/pilot-v2-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 456,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/system-quality-83c/evidence/data/profile-v2-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 458,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/system-quality-83c/evidence/data/runtimes.json",
+    "category": "personal_path",
+    "first_line": 316,
+    "matches": 78,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "docs/system-quality-83c/evidence/model-settings.json",
+    "category": "personal_path",
+    "first_line": 3,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "history",
+    "path": "exports/cd6de708-1f97-4b6d-a44e-afc93785e2cb/experiment-session.json",
+    "category": "personal_path",
+    "first_line": 35,
+    "matches": 4,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/dashboard-15b-switch/README.md",
+    "category": "personal_path",
+    "first_line": 14,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/dashboard-15b-switch/validation.json",
+    "category": "personal_path",
+    "first_line": 3,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/dashboard-model-switch/before-smoke.json",
+    "category": "personal_path",
+    "first_line": 5,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/dashboard-model-switch/smoke.json",
+    "category": "personal_path",
+    "first_line": 57,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/discussion-live-evidence/integration.json",
+    "category": "personal_path",
+    "first_line": 73,
+    "matches": 12,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/discussion-regression-evidence.md",
+    "category": "personal_path",
+    "first_line": 93,
+    "matches": 6,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/discussion-regression-investigation.md",
+    "category": "personal_path",
+    "first_line": 13,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/distributed-86b/evidence/smoke.json",
+    "category": "personal_path",
+    "first_line": 82,
+    "matches": 134,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/distributed-86b/initial-evidence/smoke.json",
+    "category": "personal_path",
+    "first_line": 82,
+    "matches": 134,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/distributed-86c/evidence/engineering.json",
+    "category": "personal_path",
+    "first_line": 1477,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/distributed-86c/evidence/pretrained/dashboard-events.jsonl",
+    "category": "personal_path",
+    "first_line": 2,
+    "matches": 12,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/distributed-86c/evidence/pretrained/frontend-tests.log",
+    "category": "personal_path",
+    "first_line": 6,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/distributed-86c/evidence/pretrained/health-ready.json",
+    "category": "personal_path",
+    "first_line": 1,
+    "matches": 4,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/distributed-86c/evidence/pretrained/local-preservation.json",
+    "category": "personal_path",
+    "first_line": 5,
+    "matches": 2,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/distributed-86c/evidence/pretrained/local-restored.json",
+    "category": "personal_path",
+    "first_line": 5,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/distributed-86c/evidence/pretrained/python-tests.log",
+    "category": "personal_path",
+    "first_line": 20,
+    "matches": 2,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/distributed-86c/evidence/pretrained/session-21ad6788-4698-4d53-a790-ac376e7b1328.json",
+    "category": "personal_path",
+    "first_line": 72,
+    "matches": 26,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/distributed-86c/evidence/pretrained/session-7461f118-2b22-41eb-93dd-9dae2b2aef45.json",
+    "category": "personal_path",
+    "first_line": 72,
+    "matches": 26,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/distributed-86c/evidence/pretrained/session-c3de05f4-e1b4-453f-bbcc-5c2e4d233ede.json",
+    "category": "personal_path",
+    "first_line": 75,
+    "matches": 22,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/distributed-86c/evidence/validation.json",
+    "category": "personal_path",
+    "first_line": 657,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/dynamic-auto-82a/evidence/audit.json",
+    "category": "personal_path",
+    "first_line": 27,
+    "matches": 2,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/dynamic-auto-82a/evidence/measured-profile-with-startup.json",
+    "category": "personal_path",
+    "first_line": 7,
+    "matches": 2,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/dynamic-auto-82a/evidence/profiles.json",
+    "category": "personal_path",
+    "first_line": 8,
+    "matches": 4,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/generalized-auto-85/evidence/complete.json",
+    "category": "personal_path",
+    "first_line": 5,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/generalized-auto-85/evidence/dashboard-final-latest.json",
+    "category": "personal_path",
+    "first_line": 5,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/generalized-auto-85/evidence/idealized-discussion.json",
+    "category": "personal_path",
+    "first_line": 51,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/generalized-auto-85/evidence/idealized-ws.json",
+    "category": "personal_path",
+    "first_line": 59,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/generalized-auto-85/evidence/measured-discussion.json",
+    "category": "personal_path",
+    "first_line": 31,
+    "matches": 5,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/generalized-auto-85/evidence/measured-profile.json",
+    "category": "personal_path",
+    "first_line": 6,
+    "matches": 4,
+    "disposition": "redacted_or_unrelated_deployment_section_excluded; no_private_values_retained"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/generalized-auto-85/evidence/measured-ws.json",
+    "category": "personal_path",
+    "first_line": 39,
+    "matches": 5,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/generalized-auto-85/evidence/spec.json",
+    "category": "personal_path",
+    "first_line": 2,
+    "matches": 5,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/generalized-auto-85/evidence/startup.json",
+    "category": "personal_path",
+    "first_line": 7,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/kv-transfer-83b/evidence/profiles.json",
+    "category": "personal_path",
+    "first_line": 10,
+    "matches": 8,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/kv-transfer-83b/evidence/settings.json",
+    "category": "personal_path",
+    "first_line": 3,
+    "matches": 4,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/kv-v2-79b-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 113,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/local-qwen3b-raw-outputs.md",
+    "category": "personal_path",
+    "first_line": 49,
+    "matches": 38,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/performance-83a/evidence/profiles.json",
+    "category": "personal_path",
+    "first_line": 10,
+    "matches": 20,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/performance-83a/evidence/settings.json",
+    "category": "personal_path",
+    "first_line": 3,
+    "matches": 4,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/shannon-90/evidence/audit.json",
+    "category": "personal_path",
+    "first_line": 4,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/shannon-90/evidence/session-ae6d990e-d7cc-4cdf-bcca-d8c677a499ee.json",
+    "category": "personal_path",
+    "first_line": 74,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/shannon-90/evidence/session-d44b0a8a-efb4-464c-b660-a1013602e504.json",
+    "category": "personal_path",
+    "first_line": 74,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/shannon-dynamic-channel-simulator.md",
+    "category": "lab_identifier",
+    "first_line": 11,
+    "matches": 1,
+    "disposition": "redacted_or_unrelated_deployment_section_excluded; no_private_values_retained"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/simulation-91-followup/post-after.json",
+    "category": "personal_path",
+    "first_line": 124,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/simulation-91-followup/validation.txt",
+    "category": "personal_path",
+    "first_line": 6,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/simulation-91/validation.txt",
+    "category": "personal_path",
+    "first_line": 26,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/socket-86a/evidence/result.json",
+    "category": "personal_path",
+    "first_line": 5,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/system-quality-83c/evidence/auto-evidence.json",
+    "category": "personal_path",
+    "first_line": 8,
+    "matches": 6,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/system-quality-83c/evidence/browser-rest-ws.json",
+    "category": "personal_path",
+    "first_line": 59,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/system-quality-83c/evidence/data/dashboard-v2-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 458,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/system-quality-83c/evidence/data/discussion-v2-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 456,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/system-quality-83c/evidence/data/formal-v2-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 456,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/system-quality-83c/evidence/data/pilot-v1-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 456,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/system-quality-83c/evidence/data/pilot-v2-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 456,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/system-quality-83c/evidence/data/profile-v2-frozen-spec.json",
+    "category": "personal_path",
+    "first_line": 458,
+    "matches": 1,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/system-quality-83c/evidence/data/runtimes.json",
+    "category": "personal_path",
+    "first_line": 316,
+    "matches": 78,
+    "disposition": "excluded_from_public_copy"
+  },
+  {
+    "scope": "worktree",
+    "path": "docs/system-quality-83c/evidence/model-settings.json",
+    "category": "personal_path",
+    "first_line": 3,
+    "matches": 3,
+    "disposition": "excluded_from_public_copy"
+  }
+]

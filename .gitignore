@@ -1,0 +1,64 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+build/
+dist/
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+.DS_Store
+
+# Local model weights and caches must stay outside Git.
+*.safetensors
+*.bin
+*.ckpt
+checkpoints/
+checkpoint*/
+.cache/huggingface/
+
+# Locally generated inference benchmark/profile snapshots.
+profile.json
+*.profile.json
+benchmark-results/
+token-cost-results.json
+
+# Local credentials and environment overrides (ignore only; never delete).
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Runtime tensors, model artifacts and scratch output outside research evidence.
+*.pt
+*.pth
+*.pkl
+*.pickle
+*.gguf
+*.onnx
+*.kv
+.cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv-*/
+venv/
+*.log
+# Existing tracked evidence logs remain tracked; .gitignore does not sanitize history.
+
+# User-owned local exports require separate publication review.
+/exports/
+
+# Development-only handoffs and server credentials are never release content.
+.agent/
+.agents/
+.ssh/
+*.keystore
+*.p12
+*.pfx

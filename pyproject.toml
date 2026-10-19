@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "token-kv-agent-system"
+version = "0.2.0"
+description = "A hardware-independent prototype for adaptive Token/KV-cache agent communication"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "token-kv-agent-system contributors" }]
+dependencies = [
+    "fastapi>=0.115,<1",
+    "uvicorn>=0.30,<1",
+    "websockets>=14,<17",
+]
+
+[project.optional-dependencies]
+dev = [
+    "httpx>=0.27,<1",
+    "pytest>=8,<9",
+]
+llm = [
+    "torch>=2.4,<3",
+    "transformers>=4.45,<6",
+    "safetensors>=0.4,<1",
+]
+
+[project.scripts]
+token-kv-demo = "token_kv_agent_system.demo:main"
+token-kv-dashboard = "token_kv_agent_system.dashboard.__main__:main"
+token-kv-llm-demo = "token_kv_agent_system.llm_demo:main"
+token-kv-inference-demo = "token_kv_agent_system.inference_demo:main"
+token-kv-inspection-demo = "token_kv_agent_system.kv_inspection_demo:main"
+token-kv-profile-demo = "token_kv_agent_system.profile_demo:main"
+token-kv-codec-demo = "token_kv_agent_system.token_codec_demo:main"
+token-kv-handoff-demo = "token_kv_agent_system.token_handoff_demo:main"
+token-kv-cost-demo = "token_kv_agent_system.token_cost_demo:main"
+token-kv-wire-demo = "token_kv_agent_system.kv_codec_demo:main"
+token-kv-restore-demo = "token_kv_agent_system.kv_restore_demo:main"
+token-kv-server-preflight = "token_kv_agent_system.server_preflight:main"
+token-kv-relay = "token_kv_agent_system.relay:main"
+token-kv-agent-worker = "token_kv_agent_system.distributed_worker:main"
+token-kv-distributed-discussion = "token_kv_agent_system.distributed_discussion:main"
+token-kv-distributed-smoke = "token_kv_agent_system.distributed_smoke:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

@@ -1,0 +1,114 @@
+{
+  "spec": {
+    "model": [
+      "Qwen/Qwen2.5-3B-Instruct",
+      "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+    ],
+    "device": "mps",
+    "dtype": "bfloat16",
+    "batch": 1,
+    "max_new_tokens": 96,
+    "do_sample": false,
+    "max_context_tokens": 4096,
+    "public_task": "You each have a private number. Exchange your numbers, add them together, and give the final sum. Answer briefly in English. If the other number has not been received, say it is unknown; do not guess.",
+    "original_stages": {
+      "a_first": "Tell Agent B your private number and ask for its number. Do not calculate yet.",
+      "b_first": "Read the received message from Agent A. State Agent A's number and your own number with clear ownership, then write their addition as an equation. If A did not provide a number, say it is unknown.",
+      "a_followup": "Unused in this single exchange scene.",
+      "b_followup": "Unused in this single exchange scene.",
+      "final": "Use the received message from Agent B and your own private number. State Agent A's number and Agent B's number with clear ownership, then write their addition as an equation. If B did not provide a number, say it is unknown. Do not guess."
+    },
+    "prompts": {
+      "P0": "Read the received message from Agent A. State Agent A's number and your own number with clear ownership, then write their addition as an equation. If A did not provide a number, say it is unknown.",
+      "P1": "Only mark Agent A's number as unknown if Agent A did not provide it. Your own private number must be read from your system instructions.",
+      "P2": "You are Agent B. Read Agent A's number from the received message, if present; otherwise mark Agent A's number as unknown. Read Agent B's own private number from your system instructions. State both numbers with explicit ownership. If both are known, calculate their sum. If Agent A already provided its number, do not ask Agent A to provide it again. Do not invent missing messages or numbers. Answer briefly."
+    },
+    "positives": [
+      [
+        17,
+        26
+      ],
+      [
+        17,
+        31
+      ],
+      [
+        13,
+        29
+      ],
+      [
+        37,
+        18
+      ],
+      [
+        42,
+        57
+      ],
+      [
+        9,
+        64
+      ]
+    ],
+    "negatives": [
+      [
+        17,
+        26,
+        "N1"
+      ],
+      [
+        17,
+        26,
+        "N2"
+      ],
+      [
+        17,
+        26,
+        "N3"
+      ],
+      [
+        17,
+        31,
+        "N1"
+      ],
+      [
+        17,
+        31,
+        "N2"
+      ],
+      [
+        17,
+        31,
+        "N3"
+      ]
+    ],
+    "repeat": [
+      [
+        17,
+        26
+      ],
+      [
+        17,
+        31
+      ]
+    ],
+    "extra": [
+      [
+        13,
+        26
+      ]
+    ],
+    "fixture": "I have not decided my private number yet.",
+    "criteria": {
+      "B1": "Explicitly identify received A number, or explicitly identify A as unknown when absent/non-numeric.",
+      "B2": "Explicitly identify own System number without calling it unknown.",
+      "B3": "Use both owned numbers for correct sum; no numerical total if A number unavailable.",
+      "B4": "Do not request A number again after receiving it.",
+      "B5": "No wrong ownership, fabricated peer number/message or controller attribution.",
+      "B6": "A final retains own number and uses actually delivered B number; missing B stays unknown with no numerical sum.",
+      "B7": "Real A/B Decode for positive scenes; exact TOKEN wire IDs, incremental receive, independent caches/shared weights. Controls verify only intended edges/origins."
+    },
+    "stop_rule": "No P3 or prompt/budget/model changes after sampling.",
+    "grading": "Conservative objective aids plus mandatory manual semantic review; unknown is not pass."
+  },
+  "sha256": "0a7281eaa378165640fa63c313fe1b4178228a39d7538ef76e8ffa775f487376"
+}

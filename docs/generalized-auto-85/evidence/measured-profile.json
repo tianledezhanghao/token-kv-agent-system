@@ -1,0 +1,446 @@
+{
+  "version": "generalized-calibration-v1",
+  "model_identity": {
+    "sender": {
+      "backend_identity_sha256": "29665ad5d88117bb382276352e6fa3750a952dbdf01f1f956532455d0dafe5d8",
+      "model_id": "REDACTED_LOCAL_MODEL/snapshots/7ae557604adf67be50417f59c2c2f167def9a775",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "config_sha256": "90002a87f987acbf06afbc004af25cb2abae37c25ff9d918c091f36e64414f72",
+      "dtype": "torch.bfloat16",
+      "device": "mps"
+    },
+    "receiver": {
+      "backend_identity_sha256": "29665ad5d88117bb382276352e6fa3750a952dbdf01f1f956532455d0dafe5d8",
+      "model_id": "REDACTED_LOCAL_MODEL/snapshots/7ae557604adf67be50417f59c2c2f167def9a775",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "config_sha256": "90002a87f987acbf06afbc004af25cb2abae37c25ff9d918c091f36e64414f72",
+      "dtype": "torch.bfloat16",
+      "device": "mps"
+    }
+  },
+  "environment": {
+    "sender": {
+      "model": {
+        "backend_identity_sha256": "29665ad5d88117bb382276352e6fa3750a952dbdf01f1f956532455d0dafe5d8",
+        "model_id": "REDACTED_LOCAL_MODEL/snapshots/7ae557604adf67be50417f59c2c2f167def9a775",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "config_sha256": "90002a87f987acbf06afbc004af25cb2abae37c25ff9d918c091f36e64414f72",
+        "dtype": "torch.bfloat16",
+        "device": "mps"
+      },
+      "hardware": {
+        "name": "Apple M5",
+        "machine": "arm64",
+        "os": "26.7.1"
+      },
+      "implementation": {
+        "algorithm_protocol_sha256": "d69d87c616bcaba88c7f3b75fe5b05b542029a991168abc0b61487d0ee39537b",
+        "torch": "2.14.0",
+        "transformers": "5.17.0",
+        "measurement_scope": "runtime_instrumented_full_session_call_v1"
+      }
+    },
+    "receiver": {
+      "model": {
+        "backend_identity_sha256": "29665ad5d88117bb382276352e6fa3750a952dbdf01f1f956532455d0dafe5d8",
+        "model_id": "REDACTED_LOCAL_MODEL/snapshots/7ae557604adf67be50417f59c2c2f167def9a775",
+        "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+        "config_sha256": "90002a87f987acbf06afbc004af25cb2abae37c25ff9d918c091f36e64414f72",
+        "dtype": "torch.bfloat16",
+        "device": "mps"
+      },
+      "hardware": {
+        "name": "Apple M5",
+        "machine": "arm64",
+        "os": "26.7.1"
+      },
+      "implementation": {
+        "algorithm_protocol_sha256": "d69d87c616bcaba88c7f3b75fe5b05b542029a991168abc0b61487d0ee39537b",
+        "torch": "2.14.0",
+        "transformers": "5.17.0",
+        "measurement_scope": "runtime_instrumented_full_session_call_v1"
+      }
+    }
+  },
+  "points": [
+    {
+      "candidate": "token",
+      "features": {
+        "message_tokens": 4,
+        "receiver_history_tokens": 64,
+        "sender_history_tokens": 95,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 38.58899947954342,
+      "spread_ms": 0.15420845011249185,
+      "samples": 2,
+      "wire_bytes": 26
+    },
+    {
+      "candidate": "kv:v0",
+      "features": {
+        "message_tokens": 4,
+        "receiver_history_tokens": 64,
+        "sender_history_tokens": 95,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 73.6165625276044,
+      "spread_ms": 0.6574374856427312,
+      "samples": 2,
+      "wire_bytes": 52628
+    },
+    {
+      "candidate": "token",
+      "features": {
+        "message_tokens": 4,
+        "receiver_history_tokens": 256,
+        "sender_history_tokens": 95,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 39.46860448922962,
+      "spread_ms": 0.03031245432794094,
+      "samples": 2,
+      "wire_bytes": 26
+    },
+    {
+      "candidate": "kv:v0",
+      "features": {
+        "message_tokens": 4,
+        "receiver_history_tokens": 256,
+        "sender_history_tokens": 95,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 74.76470852270722,
+      "spread_ms": 0.06924953777343035,
+      "samples": 2,
+      "wire_bytes": 52628
+    },
+    {
+      "candidate": "token",
+      "features": {
+        "message_tokens": 12,
+        "receiver_history_tokens": 64,
+        "sender_history_tokens": 95,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 40.09606206091121,
+      "spread_ms": 0.39027101593092084,
+      "samples": 2,
+      "wire_bytes": 58
+    },
+    {
+      "candidate": "kv:v0",
+      "features": {
+        "message_tokens": 12,
+        "receiver_history_tokens": 64,
+        "sender_history_tokens": 95,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 83.16979149822146,
+      "spread_ms": 0.8025005226954818,
+      "samples": 2,
+      "wire_bytes": 150966
+    },
+    {
+      "candidate": "token",
+      "features": {
+        "message_tokens": 12,
+        "receiver_history_tokens": 256,
+        "sender_history_tokens": 95,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 49.60164602380246,
+      "spread_ms": 3.867437015287578,
+      "samples": 2,
+      "wire_bytes": 58
+    },
+    {
+      "candidate": "kv:v0",
+      "features": {
+        "message_tokens": 12,
+        "receiver_history_tokens": 256,
+        "sender_history_tokens": 95,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 82.63977098977193,
+      "spread_ms": 2.9282289906404912,
+      "samples": 2,
+      "wire_bytes": 150966
+    },
+    {
+      "candidate": "token",
+      "features": {
+        "message_tokens": 4,
+        "receiver_history_tokens": 64,
+        "sender_history_tokens": 256,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 39.72372895805165,
+      "spread_ms": 0.0864379690028727,
+      "samples": 2,
+      "wire_bytes": 26
+    },
+    {
+      "candidate": "kv:v0",
+      "features": {
+        "message_tokens": 4,
+        "receiver_history_tokens": 64,
+        "sender_history_tokens": 256,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 74.75541700841859,
+      "spread_ms": 0.2880000392906368,
+      "samples": 2,
+      "wire_bytes": 52629
+    },
+    {
+      "candidate": "token",
+      "features": {
+        "message_tokens": 4,
+        "receiver_history_tokens": 256,
+        "sender_history_tokens": 256,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 41.93572956137359,
+      "spread_ms": 0.7001454941928387,
+      "samples": 2,
+      "wire_bytes": 26
+    },
+    {
+      "candidate": "kv:v0",
+      "features": {
+        "message_tokens": 4,
+        "receiver_history_tokens": 256,
+        "sender_history_tokens": 256,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 82.18785398639739,
+      "spread_ms": 3.6538540152832866,
+      "samples": 2,
+      "wire_bytes": 52629
+    },
+    {
+      "candidate": "token",
+      "features": {
+        "message_tokens": 12,
+        "receiver_history_tokens": 64,
+        "sender_history_tokens": 256,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 41.02477105334401,
+      "spread_ms": 0.1982289832085371,
+      "samples": 2,
+      "wire_bytes": 58
+    },
+    {
+      "candidate": "kv:v0",
+      "features": {
+        "message_tokens": 12,
+        "receiver_history_tokens": 64,
+        "sender_history_tokens": 256,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 76.47645799443126,
+      "spread_ms": 1.5073330141603947,
+      "samples": 2,
+      "wire_bytes": 150967
+    },
+    {
+      "candidate": "token",
+      "features": {
+        "message_tokens": 12,
+        "receiver_history_tokens": 256,
+        "sender_history_tokens": 256,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 41.48966650245711,
+      "spread_ms": 0.13108347775414586,
+      "samples": 2,
+      "wire_bytes": 58
+    },
+    {
+      "candidate": "kv:v0",
+      "features": {
+        "message_tokens": 12,
+        "receiver_history_tokens": 256,
+        "sender_history_tokens": 256,
+        "termination_reason": "max_new_tokens",
+        "sender_pending": true,
+        "receiver_pending": false,
+        "sender_close_tokens": 3,
+        "receiver_close_tokens": 0,
+        "prefix_tokens": 9,
+        "closing_tokens": 2,
+        "transfer_path": "packed",
+        "contract_ready": true,
+        "recomputed_tokens": 0,
+        "numeric_slot_index": null
+      },
+      "local_ms": 75.2795625012368,
+      "spread_ms": 0.5875624483451247,
+      "samples": 2,
+      "wire_bytes": 150967
+    }
+  ],
+  "sample_count": 32,
+  "calibrated_at": "2026-10-15T18:13:46.199561+00:00",
+  "evidence_sha256": "3c41b0de680c4c69792c55e925e85be75b11d2faf96c206990426be2fb40be67",
+  "notes": "Experimental bounded joint interpolation of paired genuine Decode handoffs. Full instrumented Session call, generation/setup excluded. No semantic certification. Empirical uncertainty, no extrapolation.",
+  "schema": "generalized_incremental_cost_v1",
+  "provenance": "measured",
+  "units": "ms",
+  "reliability": "experimental",
+  "relative_error_floor": 0.25,
+  "startup_cost_ms": 962.5137080438435,
+  "startup_uncertainty_ms": 962.5137080438435
+}

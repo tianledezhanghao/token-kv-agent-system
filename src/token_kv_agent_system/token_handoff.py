@@ -1,0 +1,264 @@
+"""Single-process real Token-ID handoff orchestration."""
+
+from __future__ import annotations
+
+from collections.abc import Callable, Iterable
+from dataclasses import dataclass
+from time import perf_counter
+from typing import Any, Mapping
+
+from .agent import LLMAgent
+from .model import GenerationConfig, GenerationResult, TokenIdGenerationResult
+from .model.backend_pair import validate_backend_compatibility
+from .models import TokenPayload
+from .token_protocol import (
+    TokenWirePacket,
+    deserialize_token_packet,
+    measure_token_wire_size,
+    serialize_token_ids,
+)
+from .transport import BaseByteTransport
+
+
+class TokenHandoffError(ValueError):
+    """Raised when a real Token handoff cannot be performed safely."""
+
+
+class UnknownAgentError(TokenHandoffError):
+    """Raised when a requested logical Agent is not registered."""
+
+
+class EmptyTokenSequenceError(TokenHandoffError):
+    """Raised when a sender has no generated Token IDs to hand off."""
+
+
+@dataclass(frozen=True)
+class TokenHandoffResult:
+    """Serializable-sized handoff evidence without runtime cache/tensors/bytes."""
+
+    source_agent_id: str
+    target_agent_id: str
+    sender_output_token_ids: tuple[int, ...]
+    sender_generated_text: str
+    protocol_version: int
+    token_width_bits: int
+    token_count: int
+    theoretical_token_logical_bytes: int
+    wire_header_bytes: int
+    wire_body_bytes: int
+    wire_byte_count: int
+    received_byte_count: int
+    received_token_ids: tuple[int, ...]
+    receiver_prefill_input_token_ids: tuple[int, ...]
+    receiver_prefill_forward_ms: float
+    receiver_decode_forward_latencies_ms: tuple[float, ...]
+    receiver_output_token_ids: tuple[int, ...]
+    receiver_generated_text: str
+    transport_name: str
+    serialization_ms: float
+    local_byte_transfer_ms: float
+    deserialization_ms: float
+    kv_bytes_transferred: int = 0
+
+    @property
+    def token_identity_preserved(self) -> bool:
+        return (
+            self.sender_output_token_ids
+            == self.received_token_ids
+            == self.receiver_prefill_input_token_ids
+        )
+
+
+SenderGeneration = GenerationResult | TokenIdGenerationResult
+Serializer = Callable[[Iterable[int]], bytes]
+Deserializer = Callable[[bytes], TokenWirePacket]
+StageListener = Callable[[str, Mapping[str, Any]], None]
+
+
+class TokenHandoffSession:
+    """Compose Agent generation, v1 bytes transfer, and receiver inference."""
+
+    def __init__(
+        self,
+        agents: Iterable[LLMAgent],
+        transport: BaseByteTransport,
+        *,
+        serializer: Serializer = serialize_token_ids,
+        deserializer: Deserializer = deserialize_token_packet,
+        clock: Callable[[], float] = perf_counter,
+    ) -> None:
+        self._agents: dict[str, LLMAgent] = {}
+        for agent in agents:
+            if agent.agent_id in self._agents:
+                raise ValueError(f"duplicate Agent ID: {agent.agent_id}")
+            self._agents[agent.agent_id] = agent
+        if len(self._agents) < 2:
+            raise ValueError("Token handoff requires at least two Agents")
+        self._transport = transport
+        self._serializer = serializer
+        self._deserializer = deserializer
+        self._clock = clock
+
+    def generate_and_handoff(
+        self,
+        source_agent_id: str,
+        target_agent_id: str,
+        prompt: str,
+        *,
+        sender_config: GenerationConfig | None = None,
+        receiver_config: GenerationConfig | None = None,
+        stage_listener: StageListener | None = None,
+    ) -> TokenHandoffResult:
+        source, _ = self._resolve_pair(source_agent_id, target_agent_id)
+        generation = source.generate_reply(prompt, sender_config)
+        return self.handoff_generated(
+            source_agent_id,
+            target_agent_id,
+            generation,
+            receiver_config=receiver_config,
+            stage_listener=stage_listener,
+        )
+
+    def handoff_generated(
+        self,
+        source_agent_id: str,
+        target_agent_id: str,
+        generation: SenderGeneration,
+        *,
+        receiver_config: GenerationConfig | None = None,
+        stage_listener: StageListener | None = None,
+    ) -> TokenHandoffResult:
+        return self.handoff_token_ids(
+            source_agent_id,
+            target_agent_id,
+            generation.output_token_ids,
+            sender_generated_text=generation.generated_text,
+            receiver_config=receiver_config,
+            stage_listener=stage_listener,
+        )
+
+    def handoff_token_ids(
+        self,
+        source_agent_id: str,
+        target_agent_id: str,
+        sender_output_token_ids: tuple[int, ...] | list[int],
+        *,
+        sender_generated_text: str = "",
+        receiver_config: GenerationConfig | None = None,
+        stage_listener: StageListener | None = None,
+    ) -> TokenHandoffResult:
+        """Handoff IDs already generated by the source, such as a prior reply."""
+
+        source, target = self._resolve_pair(source_agent_id, target_agent_id)
+        sender_ids = tuple(sender_output_token_ids)
+        if not sender_ids:
+            raise EmptyTokenSequenceError("sender generated no Token IDs")
+
+        started = self._clock()
+        serialized = self._serializer(sender_ids)
+        serialization_ms = (self._clock() - started) * 1_000.0
+        if not isinstance(serialized, bytes):
+            raise TypeError("Token serializer must return bytes")
+        self._notify(
+            stage_listener,
+            "serialized",
+            token_count=len(sender_ids),
+            wire_bytes=len(serialized),
+            serialization_ms=serialization_ms,
+        )
+        started = self._clock()
+        delivered = self._transport.transfer(
+            serialized, source=source.agent_id, target=target.agent_id
+        )
+        local_byte_transfer_ms = (self._clock() - started) * 1_000.0
+        if not isinstance(delivered, bytes):
+            raise TypeError("byte transport must deliver bytes")
+        self._notify(
+            stage_listener,
+            "transferred",
+            wire_bytes=len(delivered),
+            local_byte_transfer_ms=local_byte_transfer_ms,
+        )
+        started = self._clock()
+        packet = self._deserializer(delivered)
+        deserialization_ms = (self._clock() - started) * 1_000.0
+        received_ids = packet.token_ids
+        if received_ids != sender_ids:
+            raise TokenHandoffError("transported Token IDs do not match sender output")
+        self._notify(
+            stage_listener,
+            "deserialized",
+            token_count=len(received_ids),
+            deserialization_ms=deserialization_ms,
+        )
+
+        # This is the receiver inference boundary: exact deserialized IDs go
+        # straight to a new Prefill. No decoded text is accepted by this API.
+        receiver_generation = target.generate_from_token_ids(
+            received_ids, receiver_config
+        )
+        self._notify(
+            stage_listener,
+            "receiver_prefill_finished",
+            receiver_prefill_ms=receiver_generation.prefill_forward_ms,
+            token_identity_verified=(
+                received_ids == receiver_generation.prefill.input_token_ids
+            ),
+        )
+        logical_payload = TokenPayload.from_token_ids(
+            sender_ids, vocab_size=source.backend.vocab_size
+        )
+        wire_size = measure_token_wire_size(logical_payload, packet)
+
+        return TokenHandoffResult(
+            source_agent_id=source.agent_id,
+            target_agent_id=target.agent_id,
+            sender_output_token_ids=sender_ids,
+            sender_generated_text=sender_generated_text,
+            protocol_version=packet.protocol_version,
+            token_width_bits=packet.token_width_bits,
+            token_count=wire_size.token_count,
+            theoretical_token_logical_bytes=wire_size.theoretical_minimum_bytes,
+            wire_header_bytes=wire_size.wire_header_bytes,
+            wire_body_bytes=wire_size.wire_token_data_bytes,
+            wire_byte_count=len(serialized),
+            received_byte_count=len(delivered),
+            received_token_ids=received_ids,
+            receiver_prefill_input_token_ids=receiver_generation.prefill.input_token_ids,
+            receiver_prefill_forward_ms=receiver_generation.prefill_forward_ms,
+            receiver_decode_forward_latencies_ms=(
+                receiver_generation.decode_forward_latencies_ms
+            ),
+            receiver_output_token_ids=receiver_generation.output_token_ids,
+            receiver_generated_text=receiver_generation.generated_text,
+            transport_name=type(self._transport).__name__,
+            serialization_ms=serialization_ms,
+            local_byte_transfer_ms=local_byte_transfer_ms,
+            deserialization_ms=deserialization_ms,
+        )
+
+    @staticmethod
+    def _notify(
+        listener: StageListener | None, stage: str, **metadata: Any
+    ) -> None:
+        if listener is not None:
+            listener(stage, metadata)
+
+    def _resolve_pair(
+        self, source_agent_id: str, target_agent_id: str
+    ) -> tuple[LLMAgent, LLMAgent]:
+        try:
+            source = self._agents[source_agent_id]
+        except KeyError as error:
+            raise UnknownAgentError(f"unknown source Agent: {source_agent_id}") from error
+        try:
+            target = self._agents[target_agent_id]
+        except KeyError as error:
+            raise UnknownAgentError(f"unknown target Agent: {target_agent_id}") from error
+        if source_agent_id == target_agent_id:
+            raise TokenHandoffError("source and target must be different Agents")
+        try:
+            validate_backend_compatibility(source.backend, target.backend)
+        except ValueError as error:
+            raise TokenHandoffError(str(error)) from error
+        return source, target
